@@ -2,10 +2,11 @@ import datetime
 
 # Employee class (coming soon)
 class Employee:
-    def __init__(self, id, name, surname, birth, position, start_date, salary):
+    def __init__(self, id, name, surname, gender, birth, position, start_date, salary):
         self.id = id
         self.name = name
         self.surname = surname
+        self.gender = gender
         self.birth = birth
         self.position = position
         self.start_date = start_date
@@ -53,6 +54,7 @@ def add_employee():
     print("Adding new employee. Enter employee information.\n")
     employee_name = input("Enter employee name: ")
     employee_surname = input("Enter employee surname: ")
+    employee_gender = input("Gender (Male/Female): ") 
     employee_position = input("Employee position: ")
     employee_birth = input("Enter employee date of birth (Day/Month/Year): ")
     employee_salary = input("Enter employee salary (Month/USD): ")
@@ -64,6 +66,7 @@ def add_employee():
             file.write(f"Employee ID: {str(get_id)}.\n")
             file.write(f"Name: {employee_name}.\n")
             file.write(f"Surname: {employee_surname}.\n")
+            file.write(f"Gender: {employee_gender}.\n")
             file.write(f"Position: {employee_position}.\n")
             file.write(f"Start Date: {date_of_employment}.\n")
             file.write(f"Date of Birth: {employee_birth}.\n")
@@ -85,5 +88,3 @@ def remove_employee():
     # Coming Soon...
 
 menu()
-
-print("Added again. new feature2")
